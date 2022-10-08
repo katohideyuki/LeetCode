@@ -53,4 +53,27 @@ public class Sec01_TwoSum {
         }
         return res;
     }
+
+    /**
+     * 自分の回答を改善
+     * 総当たりの組み合わせで、全ての要素を見る必要はない。
+     * また、自分の要素を組み合わせから除外するのに i == jをする必要なく
+     * i + 1 を行い、「取り出した要素」と「取り出した要素の次の要素」を確
+     * 認するで十分。
+     */
+    public int[] improveTwoSum(int[] nums, int target) {
+        // 2つの配列から値を取得し、値を判定する
+        for (int i = 0; i < nums.length; i++) {
+        	// i == j は無駄なステップであり、iの次の要素と組み合わせればOK
+            for (int j = i + 1; j < nums.length; j++) {
+            	System.out.printf("i : %s, j : %s%n", i, j);
+                if (nums[i] + nums[j] == target) {
+                    // 答えとなる配列を返却
+                    return new int[] { i, j };
+                }
+            }
+        }
+        // 該当しなければ空の配列を返却
+        return new int[0];
+    }
 }

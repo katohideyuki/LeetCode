@@ -59,4 +59,22 @@ public class TestSet01_TwoSum {
             assertArrayEquals(EXPECTED_C, twoSum.otherSum(ARRAY_C, TARGET_C));
         }
     }
+
+    @Nested
+    class improveTwoSumメソッドのテスト {
+        @Test
+        void Aセットを渡したらEXPECTED_Aが返却される() {
+            assertArrayEquals(EXPECTED_A, twoSum.improveTwoSum(ARRAY_A, TARGET_A));
+        }
+
+        @Test
+        void Bセットを渡したらEXPECTED_Bが返却される() {
+            assertArrayEquals(EXPECTED_B, twoSum.improveTwoSum(ARRAY_B, TARGET_B));
+        }
+
+        @Test
+        void Cセットを渡したらEXPECTED_Cが返却される() {
+            assertArrayEquals(EXPECTED_C, twoSum.improveTwoSum(ARRAY_C, TARGET_C));
+        }
+    }
 }
